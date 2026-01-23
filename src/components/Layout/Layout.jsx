@@ -4,10 +4,10 @@ import "./Layout.css";
 
 export default function Layout({ children }) {
   return (
-    <div className={styles.wrapper}>
+    <div className="wrapper">
       <Navbar />
 
-      <main className={styles.main}>
+      <main className="main">
         {children}
       </main>
 

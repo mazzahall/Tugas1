@@ -2,7 +2,7 @@ import './Footer.css';
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
+    <footer className="footer">
       © 2026 My App
     </footer>
   );

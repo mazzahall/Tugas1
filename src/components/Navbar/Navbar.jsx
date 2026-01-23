@@ -2,11 +2,11 @@ import "./Navbar.css";
 
 export default function Navbar() {
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.container}>
-        <h1 className={styles.logo}>My App</h1>
+    <nav className="navbar">
+      <div className="container">
+        <h1 className="logo">My App</h1>
 
-        <ul className={styles.menu}>
+        <ul className="menu">
           <li>Home</li>
           <li>About</li>
           <li>Login</li>
