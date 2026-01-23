@@ -1,0 +1,32 @@
+.navbar {
+  background-color: #2563eb;
+  color: white;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.menu li {
+  cursor: pointer;
+}
+
+.menu li:hover {
+  text-decoration: underline;
+}
