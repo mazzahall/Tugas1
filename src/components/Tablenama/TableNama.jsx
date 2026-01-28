@@ -1,49 +1,44 @@
 import { useState } from "react";
-import "./TableNama.css";
 
-function App() {
-  const [nama, setNama] = useState("");
+function DaftarNama() {
+  const [inputValue, setInputValue] = useState("");
   const [listNama, setListNama] = useState([]);
 
-  const handleTambah = () => {
-    if (nama === "") return;
-    setListNama([...listNama, nama]);
-    setNama("");
-  };
+  function handleTambahNama() {
+    if (inputValue.trim() === "") return; // cegah data kosong
 
-return (
-  <div>
-    <div className="input-group">
+    setListNama([...listNama, inputValue]);
+    setInputValue(""); // reset input
+  }
+
+  return (
+    <div>
       <input
         type="text"
-        value={nama}
-        onChange={(e) => setNama(e.target.value)}
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
         placeholder="Masukkan nama"
       />
-    </div>
+      <button onClick={handleTambahNama}>Tambah Nama</button>
 
-    <div className="button-group">
-      <button onClick={handleTambah}>Tambah</button>
-    </div>
-
-    <table>
-      <thead>
-        <tr>
-          <th>No</th>
-          <th>Nama</th>
-        </tr>
-      </thead>
-      <tbody>
-        {listNama.map((item, index) => (
-          <tr key={index}>
-            <td>{index + 1}</td>
-            <td>{item}</td>
+      <table border="1" cellPadding="8">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
-);
+        </thead>
+        <tbody>
+          {listNama.map((nama, index) => (
+            <tr key={index}>
+              <td>{index + 1}</td>
+              <td>{nama}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
 }
 
-export default App;
+export default DaftarNama;
